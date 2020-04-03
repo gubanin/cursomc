@@ -61,7 +61,7 @@ public class ClienteService {
 			repo.deleteById(id);
 		}
 		catch(DataIntegrityViolationException e) {
-			throw new DataIntegrityException("Nao é possivel excluir uma categoria que possui produtos.");
+			throw new DataIntegrityException("Nao é possivel excluir porque ha pedidos relacionados");
 		}
 	}
 
